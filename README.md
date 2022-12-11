@@ -33,6 +33,23 @@ TV Time's API is not open. In order to get access to your personal data, you wil
 
 ## Setup Script
 
+### Save Logging Output
+
+The logging outputs will be saved by default in a file called "Logs.txt". 
+
+The logging level is set to `INFO`, which outputs the episodes that have successfully been exported to Trakt and the episodes with errors. To change that behavior, edit the following lines :
+
+```python
+# Setup logger
+logging.basicConfig(
+    filename="Logs.txt", # Change the file output or remove the line to not save the output
+    filemode="a", # Also remove this line to not save the output
+    format="%(asctime)s [%(levelname)7s] :: %(message)s",
+    level=logging.INFO, # Change to 'WARNING' for logging only episodes not processed
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
+```
+
 ### Install Required Libraries
 
 Install the following frameworks via Pip:

@@ -16,6 +16,8 @@ from trakt.tv import TVShow
 
 # Setup logger
 logging.basicConfig(
+    filename="Logs.txt",
+    filemode="a",
     format="%(asctime)s [%(levelname)7s] :: %(message)s",
     level=logging.INFO,
     datefmt="%Y-%m-%d %H:%M:%S",

@@ -4,3 +4,5 @@ config.json
 TimeToTrackt.py
 seen_episode.csv
 followed_tv_show.csv
+tv-time-personal-data
+Logs.txt
